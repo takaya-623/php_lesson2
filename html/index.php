@@ -95,13 +95,82 @@
 
 // echo mt_rand(1, 6);
 
-$scores = [30, 40, 50];
+// $scores = [30, 40, 50];
 
 // array_unshift($scores, 10, 20);
 // array_push($scores, 60, 70);
 // $scores[] = 80;
-array_shift($scores);
-array_pop($scores);
+// array_shift($scores);
+// array_pop($scores);
 
-print_r($scores);
+// print_r($scores);
+
+// $scores = [30, 40, 50, 60, 70, 80];
+// $partial = array_slice($scores, -2);
+
+// print_r($scores);
+// print_r($partial);
+
+// array_splice($scores, 2, 0, [100, 101]);
+
+// print_r($scores);
+
+// $scores = [40, 50, 20, 30];
+
+// sort($scores);
+// print_r($scores);
+
+// shuffle($scores);
+// print_r($scores);
+
+// $picked = array_rand($scores, 2);
+// echo $scores[$picked[0]];
+// print_r($picked);
+
+// $scores = array_fill(0, 5, 10);
+// $scores = range(1, 10, 2);
+
+// print_r($scores);
+
+// $a = [3, 4, 8];
+// $b = [4, 8, 12];
+
+// $merged = array_merge($a, $b);
+// // $merged = [...$a, ...$b];
+// // print_r($merged);
+
+// $uniques = array_unique($merged);
+// print_r($uniques);
+
+// $diff1 = array_diff($a, $b);
+// print_r($diff1);
+
+// $diff2 = array_diff($b, $a);
+// print_r($diff2);
+
+// $common = array_intersect($a, $b);
+// print_r($common);
+
+// $prices = [100, 200, 300];
+
+// $nwePrices = array_map(
+//   function ($n) { return $n * 1.1;}, $prices
+// );
+
+// print_r($nwePrices);
+
+$scores = ['a' => 1, 'b' => 2, 'c' => 3];
+// $keys = array_keys($scores);
+// print_r($keys);
+// $values = array_values($scores);
+// print_r($values);
+
+if (array_key_exists('a', $scores) == true) {
+  echo 'キー(a)はあるよーー';
+}
+
+if (in_array(1, $scores) == true) {
+  echo '値(80)はあるよーー';
+}
+
 ?>
