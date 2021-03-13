@@ -105,41 +105,42 @@
 
 // print_r($scores);
 
-// $scores = [30, 40, 50, 60, 70, 80];
-// $partial = array_slice($scores, -2);
+$scores = [30, 40, 50, 60, 70, 80];
+$partial = array_slice($scores, 2, 3);
 
 // print_r($scores);
-// print_r($partial);
+print_r($partial);
 
-// array_splice($scores, 2, 0, [100, 101]);
+// array_splice($scores, 2, 1, 100);
 
 // print_r($scores);
 
 // $scores = [40, 50, 20, 30];
 
-// sort($scores);
-// print_r($scores);
+// // sort($scores);
+// // print_r($scores);
 
-// shuffle($scores);
-// print_r($scores);
+// // shuffle($scores);
+// // print_r($scores);
 
-// $picked = array_rand($scores, 2);
-// echo $scores[$picked[0]];
-// print_r($picked);
+// // $picked = array_rand($scores, 2);
+// // echo $scores[$picked[0]]. PHP_EOL;
+// // echo $scores[$picked[1]] . PHP_EOL;
+// // print_r($picked);
 
 // $scores = array_fill(0, 5, 10);
-// $scores = range(1, 10, 2);
+// // $scores = range(1, 10);
 
 // print_r($scores);
 
-// $a = [3, 4, 8];
-// $b = [4, 8, 12];
+$a = [3, 4, 8];
+$b = [4, 8, 12];
 
 // $merged = array_merge($a, $b);
-// // $merged = [...$a, ...$b];
-// // print_r($merged);
+// $merged = [...$a, ...$b];
+// print_r($merged);
 
-// $uniques = array_unique($merged);
+// $uniques = array_unique($a);
 // print_r($uniques);
 
 // $diff1 = array_diff($a, $b);
@@ -159,18 +160,52 @@
 
 // print_r($nwePrices);
 
-$scores = ['a' => 1, 'b' => 2, 'c' => 3];
+// $scores = ['a' => 1, 'b' => 2, 'c' => 3];
 // $keys = array_keys($scores);
 // print_r($keys);
 // $values = array_values($scores);
 // print_r($values);
 
-if (array_key_exists('a', $scores) == true) {
-  echo 'キー(a)はあるよーー';
-}
+// if (array_key_exists('a', $scores) == true) {
+//   echo 'キー(a)はあるよーー';
+// }
 
-if (in_array(1, $scores) == true) {
-  echo '値(80)はあるよーー';
-}
+// if (in_array(1, $scores) == true) {
+//   echo '値(80)はあるよーー';
+// }
+
+// echo array_search(2, $scores);
+
+// sort($scores);
+// print_r($scores);
+
+// asort($scores);
+// print_r($scores);
+
+// ksort($scores);
+// print_r($scores);
+
+// $data = [
+//   ['name' => 'a', 'score' => 80],
+//   ['name' => 'b', 'score' => 60],
+//   ['name' => 'c', 'score' => 70],
+//   ['name' => 'd', 'score' => 60],
+// ];
+
+// usort(
+//   $data,
+//   function ($a, $b) {
+//     if ($a['score'] === $b['score']) {
+//       return 0;
+//     }
+//     return $a['score'] > $b['score'] ? 1 : -1;
+//   }
+// );
+
+// print_r($data);
+// $scores = array_column($data, 'score');
+// $names = array_column($data, 'name');
+// array_multisort($scores, $names, $data);
+// print_r($data);
 
 ?>
