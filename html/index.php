@@ -105,11 +105,11 @@
 
 // print_r($scores);
 
-$scores = [30, 40, 50, 60, 70, 80];
-$partial = array_slice($scores, 2, 3);
+// $scores = [30, 40, 50, 60, 70, 80];
+// $partial = array_slice($scores, 2, 3);
 
 // print_r($scores);
-print_r($partial);
+// print_r($partial);
 
 // array_splice($scores, 2, 1, 100);
 
@@ -133,8 +133,8 @@ print_r($partial);
 
 // print_r($scores);
 
-$a = [3, 4, 8];
-$b = [4, 8, 12];
+// $a = [3, 4, 8];
+// $b = [4, 8, 12];
 
 // $merged = array_merge($a, $b);
 // $merged = [...$a, ...$b];
@@ -207,5 +207,43 @@ $b = [4, 8, 12];
 // $names = array_column($data, 'name');
 // array_multisort($scores, $names, $data);
 // print_r($data);
+
+// $fp = fopen('names.txt', 'w');
+
+// fwrite($fp, "taro\n");
+// fclose($fp);
+
+// $fp = fopen('names.txt', 'a');
+
+// fwrite($fp, "jiro\n");
+// fwrite($fp, "saburo\n");
+// fclose($fp);
+
+// $fp = fopen('names.txt', 'r');
+// $content = fread($fp, filesize('names.txt'));
+
+// fclose($fp);
+// echo $content;
+
+// $content = "taro\njiro\nsaburo\n";
+// file_put_contents('names.txt', $content);
+
+// echo file_get_contents('names.txt');
+
+// file_put_contents('data/taro.txt', "taro\n");
+// file_put_contents('data/jiro.txt', "jiro\n");
+
+// $dp = opendir('data');
+// while (($item = readdir($dp)) !== false) {
+//   if ($item === '.' || $item === '..') {
+//     continue;
+//   }
+//   echo $item . PHP_EOL;
+// }
+
+// if (file_exists('data') == true) {
+//   echo 'data exists!' . PHP_EOL;
+// }
+
 
 ?>
