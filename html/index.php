@@ -247,34 +247,31 @@
 
 class Post
 {
-  public $text;
-  public $likes;
+  private $text;
+  private static $count = 0;
+
+  public function __construct($text) {
+    $this->text = $text;
+    self::$count++;
+  }
 
   public function show()
   {
     printf('%s (%d)' . PHP_EOL, $this->text, $this->likes);
   }
+
+  public static function showInfo() {
+    printf('Count: %d' . PHP_EOL, self::$count);
+  }
+
 }
 
 $post = [];
-// $post[0] = ['text' => 'hello', 'likes' => 0];
-$post[0] = new Post();
-$post[0]->text = 'hello';
-$post[0]->likes = 0;
+$post[0] = new Post('hello');
+$post[1] = new Post('hello again');
 
-// $post[1] = ['text' => 'hello again', 'likes' => 0];
-$post[1] = new Post();
-$post[1]->text = 'hello again';
-$post[1]->likes = 0;
-
-// print_r($post);
-
-// function show($post) {
-//   printf('%s (%d)' . PHP_EOL, $post['text'], $post['likes']);
-// }
-
-// show($post[0]);
-// show($post[1]);
 $post[0]->show();
 $post[1]->show();
+
+Post::showInfo();
 ?>
