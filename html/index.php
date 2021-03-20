@@ -245,33 +245,33 @@
 //   echo 'data exists!' . PHP_EOL;
 // }
 
-class Post
-{
-  private $text;
-  private static $count = 0;
+// class Post
+// {
+//   private $text;
+//   private static $count = 0;
 
-  public function __construct($text) {
-    $this->text = $text;
-    self::$count++;
-  }
+//   public function __construct($text) {
+//     $this->text = $text;
+//     self::$count++;
+//   }
 
-  public function show()
-  {
-    printf('%s (%d)' . PHP_EOL, $this->text, $this->likes);
-  }
+//   public function show()
+//   {
+//     printf('%s (%d)' . PHP_EOL, $this->text, $this->likes);
+//   }
 
-  public static function showInfo() {
-    printf('Count: %d' . PHP_EOL, self::$count);
-  }
+//   public static function showInfo() {
+//     printf('Count: %d' . PHP_EOL, self::$count);
+//   }
 
-}
+// }
 
-$post = [];
-$post[0] = new Post('hello');
-$post[1] = new Post('hello again');
+// $post = [];
+// $post[0] = new Post('hello');
+// $post[1] = new Post('hello again');
 
-$post[0]->show();
-$post[1]->show();
+// $post[0]->show();
+// $post[1]->show();
 
-Post::showInfo();
+// Post::showInfo();
 ?>
