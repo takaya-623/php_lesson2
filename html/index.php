@@ -248,34 +248,40 @@
 class Post
 {
   private $text;
-  private static $count = 0;
+  // private static $count = 0;
   // private const VERSION = 0.1;
-  public const VERSION = 0.1;
+  // public const VERSION = 0.1;
 
   public function __construct($text) {
     $this->text = $text;
-    self::$count++;
+    // self::$count++;
   }
 
   public function show()
   {
-    printf('%s (%d)' . PHP_EOL, $this->text, $this->likes);
+    printf('%s' . PHP_EOL, $this->text);
   }
 
-  public static function showInfo() {
-    printf('Count: %d' . PHP_EOL, self::$count);
-    printf('Version: %.1f' . PHP_EOL, self::VERSION);
-  }
+  // public static function showInfo() {
+  //   printf('Count: %d' . PHP_EOL, self::$count);
+  //   printf('Version: %.1f' . PHP_EOL, self::VERSION);
+  // }
+
+}
+
+class SponsoredPost extends Post {
 
 }
 
 $post = [];
 $post[0] = new Post('hello');
 $post[1] = new Post('hello again');
+$post[2] = new SponsoredPost('hello hello');
 
 $post[0]->show();
 $post[1]->show();
+$post[2]->show();
 
-Post::showInfo();
-echo Post::VERSION . PHP_EOL;
+// Post::showInfo();
+// echo Post::VERSION . PHP_EOL;
 ?>
