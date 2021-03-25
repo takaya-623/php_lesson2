@@ -270,17 +270,28 @@ class Post
 }
 
 class SponsoredPost extends Post {
+  private $sponsor;
+
+  public function __construct($text, $sponsor) {
+    parent::__construct($text);
+    $this->sponsor = $sponsor;
+  }
+
+  public function showSponsor() {
+    printf('%s' .PHP_EOL, $this->sponsor);
+  }
 
 }
 
 $post = [];
 $post[0] = new Post('hello');
 $post[1] = new Post('hello again');
-$post[2] = new SponsoredPost('hello hello');
+$post[2] = new SponsoredPost('hello hello', 'dotinstall');
 
 $post[0]->show();
 $post[1]->show();
 $post[2]->show();
+$post[2]->showSponsor();
 
 // Post::showInfo();
 // echo Post::VERSION . PHP_EOL;
